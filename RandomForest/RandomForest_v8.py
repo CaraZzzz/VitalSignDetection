@@ -33,8 +33,7 @@ import json
 from datetime import datetime
 
 # 导入特征提取模块
-# from FeatureExtract_1115_v4 import extract_features_from_all_files
-from FeatureExtract_1125_v6 import extract_features_from_all_files
+from FeatureExtract_v6 import extract_features_from_all_files
 
 # ============================================================================
 # 【配置区】
@@ -642,3 +641,4 @@ print(f"   - global_rb_results_*.csv: 全局 Range Bin 预测结果")
 print(f"   - all_predictions_*.csv: 所有预测详情（用于心率估计）")
 print(f"   - rf_model_fold*_*.pkl: 各 fold 的模型")
 print("=" * 70)
+
