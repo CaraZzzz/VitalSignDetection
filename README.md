@@ -11,20 +11,20 @@ radar_heart_rate_project/
 │   ├── heart_rate/               # 心率估计算法
 │   │   ├── __init__.py
 │   │   ├── base_estimator.py    # 基类
-│   │   ├── fft_estimator.py     # FFT方法
-│   │   ├── stft_estimator.py    # STFT方法
-│   │   ├── wavelet_estimator.py # 小波方法
-│   │   ├── dct_estimator.py     # DCT方法
-│   │   ├── vmd_estimator.py     # VMD方法
-│   │   ├── emd_estimator.py     # EMD方法
-│   │   └── eemd_estimator.py    # EEMD方法
+│   │   ├── fft.py     # FFT方法
+│   │   ├── stft.py    # STFT方法
+│   │   ├── wavelet.py # 小波方法
+│   │   ├── dct.py     # DCT方法
+│   │   ├── vmd.py     # VMD方法
+│   │   ├── emd.py     # EMD方法
+│   │   └── eemd.py    # EEMD方法
 │   │
 │   └── localization/             # 人体定位算法
 │       ├── __init__.py
 │       ├── base_localization.py # 基类
-│       ├── manual_localization.py     # 手动定位
-│       ├── rf_localization.py         # 随机森林定位
-│       └── cfar_localization.py       # CFAR定位
+│       ├── manual.py     # 手动定位
+│       ├── rf.py         # 随机森林定位
+│       └── cfar.py       # CFAR定位
 │
 ├── utils/                        # 工具模块
 │   ├── data_utils.py            # 数据处理工具
@@ -241,3 +241,4 @@ CFAR_P_FA = 1e-6       # 虚警概率
 
 
 MSc Dissertation Project - 2025
+
