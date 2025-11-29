@@ -115,11 +115,11 @@ python batch_experiments.py
 
 **实验配置**：
 - FFT: 30, 60, 90, 120秒
-- STFT: 5, 8, 10, 15, 20, 30秒
-- DCT: 8, 15, 30, 60秒
+- STFT: 30, 60, 90, 120秒
+- DCT: 30, 60, 90, 120秒
 - Wavelet: 30, 60, 90, 120秒
-- EMD: 30, 60, 120, 240秒
-- EEMD: 30, 60, 120, 240秒
+- EMD: 30, 60, 90, 120秒
+- EEMD: 30, 60, 90, 120秒
 - VMD: 30, 60, 90, 120秒
 
 **输出结果**：
@@ -216,7 +216,7 @@ STFT_WINDOW = 'hann'    # 窗口类型
 
 # VMD参数
 VMD_ALPHA = 2000        # 惩罚因子
-VMD_K = 5               # 模态数量
+VMD_K = 7               # 模态数量
 
 # EEMD参数
 EEMD_TRIALS = 100       # 集成次数
@@ -235,47 +235,9 @@ CFAR_L_R = 5           # Range训练单元
 CFAR_P_FA = 1e-6       # 虚警概率
 ```
 
-## 📝 扩展指南
 
-### 添加新的心率估计算法
 
-1. 在 `algorithms/heart_rate/` 下创建新文件
-2. 继承 `BaseHeartRateEstimator` 类
-3. 实现 `estimate()` 和 `get_method_name()` 方法
-4. 在 `__init__.py` 中导出
-5. 在 `main.py` 的 `get_heart_rate_estimator()` 中添加分支
 
-### 添加新的人体定位方法
 
-1. 在 `algorithms/localization/` 下创建新文件
-2. 继承 `BaseLocalizationMethod` 类
-3. 实现 `select_range_bin()` 和 `get_method_name()` 方法
-4. 在 `__init__.py` 中导出
-5. 在 `main.py` 的 `get_localization_method()` 中添加分支
-
-## 🐛 常见问题
-
-### Q: Random Forest方法报错找不到模型文件
-A: 请在 `config.py` 中使用绝对路径配置模型文件位置：
-```python
-RF_MODEL_PATH = r"D:\absolute\path\to\model.pkl"
-```
-
-### Q: VMD/EMD/EEMD方法报错
-A: 需要安装对应的包：
-```bash
-pip install vmdpy EMD-signal
-```
-
-### Q: 小波方法运行很慢
-A: 小波变换计算量较大，可以：
-- 减少尺度数量（修改代码中的 `num_scales`）
-- 使用其他更快的方法（如STFT）
-
-## 📄 许可证
-
-本项目仅供学术研究使用。
-
-## 👥 作者
 
 MSc Dissertation Project - 2025
