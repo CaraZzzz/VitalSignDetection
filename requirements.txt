@@ -1,0 +1,17 @@
+# 核心依赖（必需）
+numpy>=1.20.0
+pandas>=1.3.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+scipy>=1.7.0
+h5py>=3.0.0
+joblib>=1.0.0
+
+# 批量实验依赖（必需用于batch_experiments.py）
+tqdm>=4.60.0
+openpyxl>=3.0.0
+
+# 可选依赖（特定算法）
+pywt>=1.1.1              # 小波方法
+vmdpy>=0.2               # VMD方法
+EMD-signal>=1.3.0        # EMD/EEMD方法
